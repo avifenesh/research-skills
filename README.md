@@ -1,4 +1,4 @@
-# arxiv-paper-skill
+# research-skills
 
 Two AI agent skills for ML systems research: serving, training, compilers, kernels, schedulers and benchmarks.
 
@@ -60,11 +60,11 @@ The same conventions hold: source keys, "as of" dates, (design) tags. The owner'
 Copy or symlink a skill directory into your skills folder:
 
 ```bash
-git clone <this repo> ~/src/arxiv-paper-skill
-ln -s ~/src/arxiv-paper-skill/skills/arxiv-paper ~/.claude/skills/arxiv-paper       # all projects
-ln -s ~/src/arxiv-paper-skill/skills/research-repo ~/.claude/skills/research-repo
+git clone <this repo> ~/src/research-skills
+ln -s ~/src/research-skills/skills/arxiv-paper ~/.claude/skills/arxiv-paper       # all projects
+ln -s ~/src/research-skills/skills/research-repo ~/.claude/skills/research-repo
 # or, for one project:
-mkdir -p .claude/skills && cp -r ~/src/arxiv-paper-skill/skills/arxiv-paper ~/src/arxiv-paper-skill/skills/research-repo .claude/skills/
+mkdir -p .claude/skills && cp -r ~/src/research-skills/skills/arxiv-paper ~/src/research-skills/skills/research-repo .claude/skills/
 ```
 
 ### Other AgentSkills agents
