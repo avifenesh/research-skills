@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "example"
+version: 1.0.0
+date-released: 2026-10-08
+authors:
+  - family-names: "Author"
+    given-names: "Example"

@@ -1,0 +1,6 @@
+HF = 'hf_ExampleTokenAAAAAAAAAAAAAAAAAAAAAAAAA'
+SK = 'sk-ExampleKeyAAAAAAAAAAAAAAAAAAAAAAA'
+AWS = 'AKIAIOSFODNN7EXAMPLE'
+KEY = '''-----BEGIN RSA PRIVATE KEY-----
+not a key'''
+ok = 'hf_short'
