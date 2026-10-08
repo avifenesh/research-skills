@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this skill, please cite it as below. The writing guides it builds on are listed in skills/arxiv-paper/references/sources.md."
+title: "arxiv-paper-skill: an agent skill for writing and checking ML systems papers"
+authors:
+- family-names: "Fenesh"
+  given-names: "Avi"
+date-released: 2026-10-08
+license: Apache-2.0
+type: software

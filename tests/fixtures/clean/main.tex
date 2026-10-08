@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage{booktabs}
+\usepackage{graphicx}
+% A comment may hold anything: an em dash --- TODO, we believe, don't, 16GiB.
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\title{Placing Idle KV Cache by Return Time}
+\author{A. Author}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Idle agent sessions hold key-value (KV) cache memory on the GPU.
+We cut the p95 time to first token (TTFT) to 0.66 of a recency baseline.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+An idle session keeps its key-value (KV) cache on the GPU.
+The time to first token (TTFT) grows when that cache is gone.
+Kwon et~al.~\cite{vllm} page the cache, and SGLang~\cite{sglang} adds a disk tier.
+Each GPU holds 80\,GB, a block holds 16~MB and a restore takes 3\,ms.
+Runs 1--4 use the same node and the 1990s design is not in scope.
+We pick recency rather than size for the first tier.
+The gap is statistically significant (Wilcoxon signed-rank test, $p < 0.01$).
+The engine's queue is short, and ``Ask the Tool, Don't Guess'' is a paper title.
+Math is skipped: $a - b$ and $x --- y$ are fine.
+Figure~\ref{fig:trace} shows the trace and Table~\ref{tab:pools} lists the pools.
+Section~\ref{sec:intro} and~\ref{sec:part} use \cref{tab:pools} as well.
+Latency is in milliseconds (ms) throughout.
+
+\begin{verbatim}
+raw --- text, TODO, we don't care, 16GiB, \cite{x}
+\end{verbatim}
+
+\iffalse
+A groundbreaking, revolutionary draft paragraph that we cut.
+\fi
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{trace.pdf}
+  \caption{Restores from the CPU tier are faster than recompute.}
+  \label{fig:trace}
+\end{figure}
+
+\begin{table}[t]
+  \caption{Pools used in the evaluation, with KV and TTFT per pool.}
+  \label{tab:pools}
+  \centering
+  \begin{tabular}{lrr}
+    \toprule
+    Pool & KV (GB) & TTFT (ms) \\
+    \midrule
+    Agents & 12 & 61 \\
+    Chat   &  8 & 40 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\input{part}
+
+\end{document}

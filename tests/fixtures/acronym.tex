@@ -1,0 +1,15 @@
+\documentclass{article}
+\title{Placing Idle KV Cache}
+\begin{document}
+\maketitle
+\begin{abstract}
+We cut the key-value (KV) cache restore time.
+\end{abstract}
+We measure TTFT on two GPUs.
+Time to first token (TTFT) includes queueing.
+Each TTFT number is a median.
+The SLO (service level objective) is 2\,s.
+The KV cache lives on the GPU.
+% paper-lint: allow GLM
+GLM is the second model.
+\end{document}

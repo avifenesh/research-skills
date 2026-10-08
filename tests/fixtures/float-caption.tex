@@ -1,0 +1,27 @@
+\documentclass{article}
+\begin{document}
+Figure~\ref{fig:a} and Table~\ref{tab:a} show it.
+\begin{figure}[t]
+\centering
+\includegraphics{a.pdf}
+\label{fig:a}
+\end{figure}
+\begin{table}[t]
+\centering
+\begin{tabular}{lr}
+\toprule
+pool & sessions \\
+\midrule
+A & 60 \\
+\bottomrule
+\end{tabular}
+\caption{Pools.}
+\label{tab:a}
+\end{table}
+\begin{figure}[t]
+\caption{Captions go below figures.}
+\label{fig:b}
+\includegraphics{b.pdf}
+\end{figure}
+Figure~\ref{fig:b} repeats it.
+\end{document}
