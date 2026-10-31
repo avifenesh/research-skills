@@ -60,7 +60,7 @@ The same conventions hold: source keys, "as of" dates, (design) tags. The owner'
 Copy or symlink a skill directory into your skills folder:
 
 ```bash
-git clone <this repo> ~/src/research-skills
+git clone https://github.com/avifenesh/research-skills ~/src/research-skills
 ln -s ~/src/research-skills/skills/arxiv-paper ~/.claude/skills/arxiv-paper       # all projects
 ln -s ~/src/research-skills/skills/research-repo ~/.claude/skills/research-repo
 # or, for one project:
@@ -69,7 +69,7 @@ mkdir -p .claude/skills && cp -r ~/src/research-skills/skills/arxiv-paper ~/src/
 
 ### Other AgentSkills agents
 
-Copy `skills/arxiv-paper/` or `skills/research-repo/` into the agent's skills directory (for example `.codex/skills/`, `.cursor/skills/`), or use the `skills` CLI: `npx skills add <owner>/<this repo>`.
+Copy `skills/arxiv-paper/` or `skills/research-repo/` into the agent's skills directory (for example `.codex/skills/`, `.cursor/skills/`), or use the `skills` CLI: `npx skills add avifenesh/research-skills`.
 
 ## paper_lint.py
 
